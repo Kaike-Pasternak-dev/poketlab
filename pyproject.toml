@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketlab"
+version = "1.1.0"
+description = "Canivete de laboratorio 100% Termux: IR nativo com gerador NEC, scan de rede local, etiquetas de lab, logging e launcher de apps."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Kaike Pasternak"}]
+dependencies = ["rich>=13.7.0"]
+
+[project.scripts]
+pocketlab = "pocketlab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pocketlab*"]
